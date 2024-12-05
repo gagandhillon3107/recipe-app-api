@@ -18,6 +18,6 @@ jobs:
           pip install -r requirements.txt
           pip install -r requirements.dev.txt
       - name: Lint
-        run: flake8
+        run: cd app && flake8
       - name: Test
-        run: python manage.py test
+        run: cd app && python manage.py test
